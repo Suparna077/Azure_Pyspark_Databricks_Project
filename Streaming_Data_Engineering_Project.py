@@ -39,7 +39,7 @@ dbutils.widgets.text("Event Hub Name","<your IoT Hub's Event Hub Compatible Name
 
 # Setup access to storage account for temp data when pushing to Synapse
 storage_account = dbutils.widgets.get("Storage Account")
-spark.conf.set(f"fs.azure.account.key.{storage_account}.dfs.core.windows.net","VVJVYkrDcgJhspZ/iCp3U9C6YBgXCHY41gdZs2RUhI7n5FRfCJx64hYObzOkqslHNOUEj+enQMeW+AStabwgSw==")
+spark.conf.set(f"fs.azure.account.key.{storage_account}.dfs.core.windows.net","")
 
 # Setup storage locations for all data
 ROOT_PATH = f"abfss://iot@{storage_account}.dfs.core.windows.net/"
